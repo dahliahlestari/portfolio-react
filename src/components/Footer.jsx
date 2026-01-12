@@ -18,7 +18,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="mailto:hello@yourdomain.com"
+            href="mailto:Dahliahlestari@gmail.com"
             className="hover:text-white transition"
           >
             Email
