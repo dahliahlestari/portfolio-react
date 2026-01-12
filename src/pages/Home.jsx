@@ -120,47 +120,6 @@ export default function Home() {
         </section>
 
 
-      {/* ROLES */}
-      <section className="py-32">
-        <div className="max-w-6xl mx-auto px-6 grid gap-10 md:grid-cols-3">
-          {[
-            {
-              title: "Marketing Design",
-              desc: "Clear visuals built for communication",
-              link: "/marketing-design",
-            },
-            {
-              title: "Social Media & Paid Ads",
-              desc: "Strategy-driven content & ads",
-              link: "/social-media",
-            },
-            {
-              title: "Content Editor",
-              desc: "Clean, engaging digital edits",
-              link: "/content-editor",
-            },
-          ].map((item, i) => (
-            <Link
-              key={i}
-              to={item.link}
-              className="fade-up group border border-white/10 p-8
-                         transition-all duration-300
-                         hover:-translate-y-1
-                         hover:border-white/30
-                         hover:bg-white/5"
-              style={{ animationDelay: `${i * 150}ms` }}
-            >
-              <h3 className="text-lg font-medium mb-3">
-                {item.title}
-              </h3>
-              <p className="text-sm text-white/60">
-                {item.desc}
-              </p>
-            </Link>
-          ))}
-        </div>
-      </section>
-
       {/* SELECTED WORKS */}
       <section className="py-32">
         <div className="max-w-6xl mx-auto px-6">
@@ -181,11 +140,6 @@ export default function Home() {
                 title: "W3Liquor — Social Media & Campaign Design",
                 category: "Social Media · Paid Ads",
                 desc: "Managing branded content, promotional visuals, and campaign-based executions aligned with business goals.",
-                },
-                {
-                title: "Personal Brand — @dahliahlestari",
-                category: "Content Strategy · Visual Identity",
-                desc: "Building a consistent personal brand through visual storytelling and content planning.",
                 },
                 {
                 title: "Promotional Marketing Assets",
