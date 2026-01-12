@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===============================
+   BACKGROUND SYSTEM (ART STYLE)
+   =============================== */
+
+@layer utilities {
+
+  /* BASE */
+  .bg-base {  
+    background-color: rgba(17, 17, 17, 0.21);
+  }
+
+  /* COLOR WASH */
+  .bg-art-gradient {  
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(40% 100% at 15% 10%, rgba(4, 37, 126, 0.887), transparent 90%),
+      radial-gradient(50% 80% at 90% 50%, rgba(75, 11, 107, 0.672), transparent 90%),
+      radial-gradient(60% 90% at 30% 80%, rgb(2, 1, 27), transparent 650%),
+      radial-gradient(70% 80% at 100% 50%, rgba(65, 8, 135, 0.822), transparent 110%);
+    filter: blur(5px);
+    z-index: -40; 
+    pointer-events: none;
+  }
+
+  /* STRIPES */
+  .bg-art-stripes {
+    position: fixed;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      90deg,
+      rgba(6, 4, 34, 0.05) 2px,
+      rgba(255,255,255,0.05) 2px,
+      transparent 10px,
+      transparent 14px
+    );
+    mix-blend-mode: overlay;
+    opacity: 0.9;
+    animation: moveStripes 40s linear infinite;
+    z-index: -30;
+    pointer-events: none;
+  }
+
+  /* FADE UP */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  /* ===============================
+   SCROLL REACTIVE EFFECTS
+   =============================== */
+
+  .scroll-gradient {
+    transform:
+      translateY(calc(var(--scroll) * 0.08px))
+      scale(1.05);
+  }
+
+  .scroll-stripes {
+    background-position-x: calc(var(--scroll) * 0.25px);
+    background-position-y: calc(var(--scroll) * -0.05px);
+  }
+
+}
+
+/* ===============================
+   ANIMATIONS
+   =============================== */
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveStripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 400px 0;
+  }
+}
+
+/* ===============================
+   GLOBAL
+   =============================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#0b0b0f] text-white antialiased;
+}
+
+
+
