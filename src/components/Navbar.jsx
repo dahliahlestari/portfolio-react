@@ -5,47 +5,41 @@ export default function Navbar() {
     <header className="fixed top-0 w-full z-50 backdrop-blur border-b border-white/10">
       <div className="max-w-5xl mx-auto px-5 py-4 flex justify-between items-center">
 
+        {/* BRAND */}
         <Link to="/" className="text-sm font-medium">
-          Dahliah Lestari
+          SPECIAL
         </Link>
 
+        {/* NAV */}
         <nav className="flex gap-8 text-sm text-white/60">
+
           <NavLink
-            to="/"
+            to="/work"
             className={({ isActive }) =>
               isActive ? "text-white" : "hover:text-white transition"
             }
           >
-            Home
+            Work
           </NavLink>
 
           <NavLink
-            to="/graphic-design"
+            to="/process"
             className={({ isActive }) =>
               isActive ? "text-white" : "hover:text-white transition"
             }
           >
-            Graphic Design
+            Process
           </NavLink>
 
-
           <NavLink
-            to="/social-media"
+            to="/social"
             className={({ isActive }) =>
               isActive ? "text-white" : "hover:text-white transition"
             }
           >
-            Social & Ads
+            Social
           </NavLink>
 
-          <NavLink
-            to="/content-editor"
-            className={({ isActive }) =>
-              isActive ? "text-white" : "hover:text-white transition"
-            }
-          >
-            Content
-          </NavLink>
         </nav>
       </div>
     </header>

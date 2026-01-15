@@ -1,0 +1,84 @@
+export default function Process() {
+  return (
+    <section className="max-w-5xl mx-auto px-5 pt-40 pb-40">
+
+      {/* PAGE TITLE */}
+      <header className="mb-24">
+        <h1 className="text-5xl md:text-6xl font-semibold tracking-tight fade-up">
+          PROCESS
+        </h1>
+
+        <p className="mt-6 max-w-md text-xs uppercase tracking-[0.3em] text-white/60 fade-up">
+          How I approach visual work
+        </p>
+      </header>
+
+      {/* PROCESS CONTENT */}
+      <div className="space-y-32">
+
+        <ProcessBlock
+          index="01"
+          title="Observation"
+          description="Every project starts with listening. Context, intention,
+          and constraints are observed before any visual decision is made."
+        />
+
+        <ProcessBlock
+          index="02"
+          title="Structure"
+          description="Information is organized into a clear hierarchy.
+          Layout, rhythm, and balance are defined early to avoid decoration."
+        />
+
+        <ProcessBlock
+          index="03"
+          title="Exploration"
+          description="Visual directions are explored with restraint.
+          Choices are reduced until only what is necessary remains."
+        />
+
+        <ProcessBlock
+          index="04"
+          title="Refinement"
+          description="Details are adjusted carefully. Typography, spacing,
+          and contrast are refined to support clarity and longevity."
+        />
+
+        <ProcessBlock
+          index="05"
+          title="Delivery"
+          description="Final outputs are prepared with consistency
+          across formats and platforms, ensuring the system works in real use."
+        />
+
+      </div>
+    </section>
+  )
+}
+
+/* ===============================
+   PROCESS BLOCK
+   =============================== */
+
+function ProcessBlock({ index, title, description }) {
+  return (
+    <div className="fade-up">
+
+      {/* INDEX */}
+      <span className="block text-xs uppercase tracking-[0.4em] text-white/40">
+        {index}
+      </span>
+
+      {/* TITLE */}
+      <h2 className="mt-4 text-2xl md:text-3xl font-medium tracking-tight">
+        {title}
+      </h2>
+
+      {/* DESCRIPTION */}
+      <p className="mt-6 max-w-xl text-white/70 leading-relaxed">
+        {description}
+      </p>
+
+    </div>
+  )
+}

@@ -3,14 +3,15 @@ import { Routes, Route } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 
-import Home from "./pages/Home"
-import GraphicDesign from "./pages/GraphicDesign"
-import SocialMedia from "./pages/SocialMedia"
-import ContentEditor from "./pages/ContentEditor"
+import Home from "./pages/SPECIAL"
+import Work from "./pages/WORK"
+import Social from "./pages/SOCIAL"
+import Process from "./pages/PROCESS"
 
 export default function App() {
   return (
-    <div className="relative overflow-x-hidden">
+    <div className="relative overflow-x-hidden bg-base">
+
       {/* BACKGROUND ART */}
       <div className="bg-art-gradient" />
       <div className="bg-art-stripes" />
@@ -20,9 +21,9 @@ export default function App() {
       <main className="pt-32 relative z-10">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/graphic-design" element={<GraphicDesign />} />
-          <Route path="/social-media" element={<SocialMedia />} />
-          <Route path="/content-editor" element={<ContentEditor />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/process" element={<Process />} />
+          <Route path="/social" element={<Social />} />
         </Routes>
       </main>
 

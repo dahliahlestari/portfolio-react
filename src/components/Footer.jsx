@@ -1,28 +1,41 @@
 export default function Footer() {
   return (
-    <footer className="backdrop-blur border-t border-white/10 mt-32">
-      <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-white/50">
+    <footer className="relative z-10 mt-40 border-t border-white/10">
+      <div className="max-w-5xl mx-auto px-5 py-16">
 
-        <p>
-          © 2026 Dahliah. All rights reserved.
-        </p>
+        {/* TOP */}
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-10">
 
-        <div className="flex gap-6">
-          <a
-            href="https://instagram.com/dahliahlestari"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-white transition"
-          >
-            Instagram
-          </a>
+          {/* BRAND */}
+          <div>
+            <p className="text-xs font-medium tracking-[0.2em] uppercase text-white">
+              SPECIAL
+            </p>
+            <p className="mt-4 max-w-xs text-sm text-white/60 leading-relaxed">
+              A minimalist graphic design studio focused on clarity,
+              structure, and intentional visual systems.
+            </p>
+          </div>
 
-          <a
-            href="mailto:Dahliahlestari@gmail.com"
-            className="hover:text-white transition"
-          >
-            Email
-          </a>
+          {/* NAV */}
+          <nav className="flex gap-8 text-sm text-white/60">
+            <a href="/work" className="hover:text-white transition">
+              Work
+            </a>
+            <a href="/process" className="hover:text-white transition">
+              Process
+            </a>
+            <a href="/social" className="hover:text-white transition">
+              Social
+            </a>
+          </nav>
+
+        </div>
+
+        {/* BOTTOM */}
+        <div className="mt-16 flex flex-col md:flex-row md:items-center md:justify-between gap-6 text-xs text-white/40">
+          <span>© {new Date().getFullYear()} SPECIAL Studio</span>
+          <span>Designed with restraint</span>
         </div>
 
       </div>

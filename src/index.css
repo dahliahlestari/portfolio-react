@@ -4,43 +4,42 @@
 
 /* ===============================
    BACKGROUND SYSTEM (ART STYLE)
+   SPECIAL — DARK MONOCHROME
    =============================== */
 
 @layer utilities {
 
   /* BASE */
   .bg-base {  
-    background-color: rgba(17, 17, 17, 0.21);
+    background-color: rgba(8, 8, 10, 0.366);
   }
 
-  /* COLOR WASH */
+  /* COLOR WASH — MONOCHROME DEPTH */
   .bg-art-gradient {  
     position: fixed;
     inset: 0;
     background:
-      radial-gradient(40% 100% at 15% 10%, rgba(4, 37, 126, 0.887), transparent 90%),
-      radial-gradient(50% 80% at 90% 50%, rgba(75, 11, 107, 0.672), transparent 90%),
-      radial-gradient(60% 90% at 30% 80%, rgb(2, 1, 27), transparent 650%),
-      radial-gradient(70% 80% at 100% 50%, rgba(65, 8, 135, 0.822), transparent 110%);
-    filter: blur(5px);
+      radial-gradient(45% 90% at 18% 14%, rgba(255, 255, 255, 0.161), transparent 70%),
+      radial-gradient(55% 85% at 85% 48%, rgba(255, 255, 255, 0.094), transparent 75%),
+      radial-gradient(70% 100% at 35% 85%, rgba(0,0,0,0.95), transparent 82%);
+    filter: blur(7px);
     z-index: -40; 
     pointer-events: none;
   }
 
-  /* STRIPES */
+  /* STRIPES — SUBTLE TEXTURE */
   .bg-art-stripes {
     position: fixed;
     inset: 0;
     background-image: repeating-linear-gradient(
       90deg,
-      rgba(6, 4, 34, 0.05) 2px,
-      rgba(255,255,255,0.05) 2px,
-      transparent 10px,
-      transparent 14px
+      rgba(255,255,255,0.035) 1px,
+      transparent 9px,
+      transparent 18px
     );
     mix-blend-mode: overlay;
-    opacity: 0.9;
-    animation: moveStripes 40s linear infinite;
+    opacity: 0.45;
+    animation: moveStripes 55s linear infinite;
     z-index: -30;
     pointer-events: none;
   }
@@ -48,23 +47,23 @@
   /* FADE UP */
   .fade-up {
     opacity: 0;
-    transform: translateY(18px);
+    transform: translateY(16px);
     animation: fadeUp 0.6s ease-out forwards;
   }
 
   /* ===============================
    SCROLL REACTIVE EFFECTS
+   (VERY SOFT)
    =============================== */
 
   .scroll-gradient {
     transform:
-      translateY(calc(var(--scroll) * 0.08px))
-      scale(1.05);
+      translateY(calc(var(--scroll) * 0.05px))
+      scale(1.02);
   }
 
   .scroll-stripes {
-    background-position-x: calc(var(--scroll) * 0.25px);
-    background-position-y: calc(var(--scroll) * -0.05px);
+    background-position-x: calc(var(--scroll) * 0.12px);
   }
 
 }
@@ -85,9 +84,72 @@
     background-position: 0 0;
   }
   to {
-    background-position: 400px 0;
+    background-position: 360px 0;
   }
 }
+
+/* ===============================
+   BACKGROUND MOTION (ART ANIMATION)
+   ADD-ON ONLY — NON DESTRUCTIVE
+   =============================== */
+
+/* GRADIENT FLOW */
+.bg-art-gradient {
+  animation: gradientFlow 15s ease-in-out infinite;
+  background-size: 120% 120%;
+}
+
+/* BREATHING LIGHT */
+.bg-art-gradient {
+  animation:
+    gradientFlow 15s ease-in-out infinite,
+    lightBreathing 10s ease-in-out infinite;
+}
+
+/* OPTIONAL: STRIPES DRIFT (MICRO MOTION) */
+.bg-art-stripes {
+  animation:
+    moveStripes 55s linear infinite,
+    stripeDrift 90s linear infinite;
+}
+
+/* ===============================
+   KEYFRAMES (NEW)
+   =============================== */
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes lightBreathing {
+  0% {
+    filter: blur(7px) brightness(0.95);
+  }
+  50% {
+    filter: blur(8px) brightness(1.05);
+  }
+  100% {
+    filter: blur(7px) brightness(0.95);
+  }
+}
+
+@keyframes stripeDrift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 600px 0;
+  }
+}
+
 
 /* ===============================
    GLOBAL
@@ -98,8 +160,5 @@ html {
 }
 
 body {
-  @apply bg-[#0b0b0f] text-white antialiased;
+  @apply bg-[#08080a] text-white antialiased;
 }
-
-
-
