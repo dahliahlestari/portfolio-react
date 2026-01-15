@@ -41,7 +41,7 @@ export default function Work() {
           title="Minimal Packaging Design"
           category="Visual System"
           year="2023"
-          image="/works/brand-identity.png"
+          image="/works/minimal-packaging-design.png"
         />
         </Link>
 

@@ -35,7 +35,7 @@ const works = [
     title: "Minimal Packaging Design",
     category: "package",
     year: "2023",
-    banner: "/works/minimal-packaging-design.jpg",
+    banner: "/works/minimal-packaging-design.png",
     description:
       "An editorial-driven social campaign with narrative rhythm and visual restraint.",
     images: [

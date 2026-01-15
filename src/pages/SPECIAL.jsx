@@ -1,7 +1,23 @@
+import heroImage from "/special/art.png"
+
 export default function Home() {
   return (
-    <section className="relative min-h-[100svh] flex items-center">
-      <div className="w-full max-w-7xl mx-auto px-6 md:px-10">
+    <section className="relative min-h-[100svh] flex items-center overflow-hidden">
+
+      {/* HERO IMAGE WITH TOP + BOTTOM FADE */}
+      <div
+        className="
+          absolute inset-0 z-[-10]
+          bg-no-repeat bg-top bg-cover
+          scale-[1.0]
+          contrast-[1.0] brightness-[0.2]
+          hero-mask
+        "
+        style={{ backgroundImage: `url(${heroImage})` }}
+      />
+
+      {/* CONTENT */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-10">
 
         {/* SMALL NOTE */}
         <span className="block text-[10px] uppercase tracking-[0.25em] text-white/40 fade-up">
@@ -30,7 +46,7 @@ export default function Home() {
           </p>
         </div>
 
-        {/* DISCONNECTED META */}
+        {/* META */}
         <div className="mt-32 grid grid-cols-1 md:grid-cols-3 gap-16 fade-up">
 
           <div>
@@ -67,11 +83,11 @@ export default function Home() {
 
         </div>
 
-        {/* CTA — BARELY */}
+        {/* CTA */}
         <div className="mt-40 fade-up">
           <a
             href="/work"
-            className="text-[10px] uppercase tracking-[0.3  em] text-white/40 hover:text-white transition"
+            className="text-[10px] uppercase tracking-[0.3em] text-white/40 hover:text-white transition"
           >
             View Work
           </a>

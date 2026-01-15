@@ -47,7 +47,7 @@ export default function Social() {
         />
 
         <InfoBlock
-          label="Owner"
+          label="Handle"
           title="@Dahliahlestari"
           description="Handle By Dahliahlestari"
           link="https://www.instagram.com/dahliahlestari/"
@@ -60,13 +60,11 @@ export default function Social() {
           </span>
 
           <p className="mt-6 max-w-xl text-white/60 leading-relaxed text-sm">
-            All works displayed on this site are protected by copyright.
-            Content may not be used, reproduced, or distributed without
-            prior written permission from SPECIAL Studio.
+            SPECIAL Studio.
           </p>
 
           <p className="mt-4 text-xs uppercase tracking-[0.3em] text-white/40">
-            © {new Date().getFullYear()} SPECIAL Studio. All rights reserved.
+            © {new Date().getFullYear()} SPECIAL. All rights reserved.
           </p>
         </div>
         
@@ -90,7 +88,7 @@ function InfoBlock({ label, title, description, link }) {
       className="block fade-up group"
     >
       {/* LABEL */}
-      <span className="block text-xs uppercase tracking-[0.4em] text-white/40">
+      <span className="block text-xs uppercase tracking-[0.25em] text-white/40">
         {label}
       </span>
 
