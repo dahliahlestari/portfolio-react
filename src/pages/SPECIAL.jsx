@@ -29,7 +29,7 @@ export default function Home() {
         </span>
 
         {/* HERO */}
-        <h1 className="melt text-[10vw] font-semibold"
+        <h1 className="melt text-[10vw] font-semibold md:px-48"
             data-text="SPECIAL">
             SPECIAL
           </h1>
