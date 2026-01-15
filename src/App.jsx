@@ -7,6 +7,8 @@ import Home from "./pages/SPECIAL"
 import Work from "./pages/WORK"
 import Social from "./pages/SOCIAL"
 import Process from "./pages/PROCESS"
+import WorkDetail from "./pages/WORKDETAIL"
+
 
 export default function App() {
   return (
@@ -24,6 +26,7 @@ export default function App() {
           <Route path="/work" element={<Work />} />
           <Route path="/process" element={<Process />} />
           <Route path="/social" element={<Social />} />
+          <Route path="/work/:slug" element={<WorkDetail />} />
         </Routes>
       </main>
 

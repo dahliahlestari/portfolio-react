@@ -37,6 +37,9 @@ export default function Process() {
           Choices are reduced until only what is necessary remains."
         />
 
+        {/* ART GALLERY */}
+        <ArtGallery />
+
         <ProcessBlock
           index="04"
           title="Refinement"
@@ -77,6 +80,66 @@ function ProcessBlock({ index, title, description }) {
       {/* DESCRIPTION */}
       <p className="mt-6 max-w-xl text-white/70 leading-relaxed">
         {description}
+      </p>
+
+    </div>
+  )
+}
+
+/* ===============================
+   ART GALLERY
+   =============================== */
+
+function ArtGallery() {
+  return (
+    <div className="fade-up">
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        {/* IMAGE 1 */}
+        <div className="group aspect-[4/5] overflow-hidden bg-white/5">
+          <img
+            src="/process/process-1.jpg"
+            alt=""
+            className="
+              w-full h-full object-cover
+              transition duration-700 ease-out
+              group-hover:scale-105
+            "
+          />
+        </div>
+
+        {/* IMAGE 2 */}
+        <div className="group aspect-[4/5] overflow-hidden bg-white/5">
+          <img
+            src="/process/process-2.jpg"
+            alt=""
+            className="
+              w-full h-full object-cover
+              transition duration-700 ease-out
+              group-hover:scale-105
+            "
+          />
+        </div>
+
+        {/* IMAGE 3 */}
+        <div className="group aspect-[4/5] overflow-hidden bg-white/5">
+          <img
+            src="/process/process-3.jpg"
+            alt=""
+            className="
+              w-full h-full object-cover
+              transition duration-700 ease-out
+              group-hover:scale-105
+            "
+          />
+        </div>
+
+      </div>
+
+      {/* OPTIONAL CAPTION */}
+      <p className="mt-6 text-xs uppercase tracking-[0.3em] text-white/40">
+        Selected process snapshots
       </p>
 
     </div>
