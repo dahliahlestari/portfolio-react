@@ -29,7 +29,7 @@ export default function Home() {
         </span>
 
         {/* HERO */}
-        <h1 className="melt text-[10vw] font-semibold md:px-48"
+        <h1 className="melt font-semibold text-[18vw] md:text-[10vw]"
             data-text="SPECIAL">
             SPECIAL
           </h1>
@@ -88,8 +88,11 @@ export default function Home() {
           </div>
 
         </div>
-        <WorkSection />
-        <ProcessSection />
+        
+        <div className="mt-10 space-y-10 md:space-y-10">
+          <WorkSection />
+          <ProcessSection />
+        </div>
         {/* CTA */}
         <div className="mt-40 fade-up">
           <a

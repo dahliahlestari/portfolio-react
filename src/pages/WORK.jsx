@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 
 export function WorkSection() {
   return (
-    <section className="max-w-5xl mx-auto px-5 pt-40 pb-40">
+    <section className="mx-auto px-5 pt-40 pb-40">
 
       <header className="mb-24">
         <span className="block text-xs uppercase tracking-[0.3em] text-white/40 fade-up">
@@ -18,7 +18,7 @@ export function WorkSection() {
         </h2>
       </header>
 
-      <div className="space-y-32">
+     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-2">
 
         <Link to={`/work/brand-identity-system`}>
           <WorkItem
