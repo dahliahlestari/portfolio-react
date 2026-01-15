@@ -1,3 +1,50 @@
+/* ===============================
+   PROCESS SECTION (FOR HOME)
+   =============================== */
+
+export function ProcessSection() {
+  return (
+    <section className="max-w-5xl mx-auto px-5 pt-40 pb-40">
+
+      <header className="mb-24">
+        <span className="block text-xs uppercase tracking-[0.3em] text-white/40 fade-up">
+          Process
+        </span>
+
+        <h2 className="mt-6 text-3xl md:text-4xl font-semibold tracking-tight fade-up">
+          How I Approach Visual Work
+        </h2>
+      </header>
+
+      <div className="space-y-24">
+
+        <ProcessBlock
+          index="01"
+          title="Observation"
+          description="Listening comes first. Context, intention, and constraints
+          are observed before visual decisions are made."
+        />
+
+        <ProcessBlock
+          index="02"
+          title="Structure"
+          description="Information is organized into hierarchy and rhythm.
+          Structure is defined before aesthetics."
+        />
+
+        <ProcessBlock
+          index="03"
+          title="Refinement"
+          description="Choices are reduced carefully until only what supports
+          clarity and longevity remains."
+        />
+
+      </div>
+
+    </section>
+  )
+}
+
 export default function Process() {
   return (
     <section className="max-w-5xl mx-auto px-5 pt-40 pb-40">

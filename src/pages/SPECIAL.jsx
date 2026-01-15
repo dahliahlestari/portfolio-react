@@ -1,4 +1,8 @@
 import heroImage from "/special/art.png"
+import { WorkSection } from "./WORK"
+import { ProcessSection } from "./PROCESS"
+
+
 
 export default function Home() {
   return (
@@ -7,10 +11,10 @@ export default function Home() {
       {/* HERO IMAGE WITH TOP + BOTTOM FADE */}
       <div
         className="
-          absolute inset-0 z-[-10]
+          absolute top-0 left-0 right-0 z-[-10]
+          h-[85vh]
           bg-no-repeat bg-top bg-cover
-          scale-[1.0]
-          contrast-[1.0] brightness-[0.2]
+          contrast-[1.0] brightness-[0.23]
           hero-mask
         "
         style={{ backgroundImage: `url(${heroImage})` }}
@@ -25,9 +29,10 @@ export default function Home() {
         </span>
 
         {/* HERO */}
-        <h1 className="mt-20 text-[10vw] leading-[0.25] font-semibold tracking-tight fade-up">
-          SPECIAL
-        </h1>
+        <h1 className="melt text-[10vw] font-semibold"
+            data-text="SPECIAL">
+            SPECIAL
+          </h1>
 
         {/* BREAK */}
         <div className="mt-20 fade-up">
@@ -45,6 +50,7 @@ export default function Home() {
             Aesthetic decisions follow restraint.
           </p>
         </div>
+
 
         {/* META */}
         <div className="mt-32 grid grid-cols-1 md:grid-cols-3 gap-16 fade-up">
@@ -82,7 +88,8 @@ export default function Home() {
           </div>
 
         </div>
-
+        <WorkSection />
+        <ProcessSection />
         {/* CTA */}
         <div className="mt-40 fade-up">
           <a

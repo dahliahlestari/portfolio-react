@@ -12,30 +12,17 @@ export default function Footer() {
               SPECIAL
             </p>
             <p className="mt-4 max-w-xs text-sm text-white/60 leading-relaxed">
-              A minimalist graphic design studio focused on clarity,
+              A graphic design focused on clarity,
               structure, and intentional visual systems.
             </p>
           </div>
-
-          {/* NAV */}
-          <nav className="flex gap-8 text-sm text-white/60">
-            <a href="/work" className="hover:text-white transition">
-              Work
-            </a>
-            <a href="/process" className="hover:text-white transition">
-              Process
-            </a>
-            <a href="/social" className="hover:text-white transition">
-              Social
-            </a>
-          </nav>
 
         </div>
 
         {/* BOTTOM */}
         <div className="mt-16 flex flex-col md:flex-row md:items-center md:justify-between gap-6 text-xs text-white/40">
-          <span>© {new Date().getFullYear()} SPECIAL Studio</span>
-          <span>Designed with restraint</span>
+          <span>© {new Date().getFullYear()} SPECIAL</span>
+          <span>Design dahliahlestari</span>
         </div>
 
       </div>

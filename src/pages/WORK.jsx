@@ -1,8 +1,65 @@
 import { Link } from "react-router-dom"
 
-export default function Work() {
+/* ===============================
+   WORK SECTION (FOR HOME)
+   =============================== */
+
+export function WorkSection() {
   return (
     <section className="max-w-5xl mx-auto px-5 pt-40 pb-40">
+
+      <header className="mb-24">
+        <span className="block text-xs uppercase tracking-[0.3em] text-white/40 fade-up">
+          Work
+        </span>
+
+        <h2 className="mt-6 text-3xl md:text-4xl font-semibold tracking-tight fade-up">
+          Selected Projects
+        </h2>
+      </header>
+
+      <div className="space-y-32">
+
+        <Link to={`/work/brand-identity-system`}>
+          <WorkItem
+            title="Brand Identity System"
+            category="Graphic Design"
+            year="2024"
+            image="/works/brand-identity-banner.png"
+          />
+        </Link>
+
+        <Link to={`/work/editorial-social-campaign`}>
+          <WorkItem
+            title="Editorial Social Campaign"
+            category="Social Media"
+            year="2024"
+            image="/works/editorial-social-banner.png"
+          />
+        </Link>
+
+         <Link to={`/work/minimal-packaging-design`}>
+          <WorkItem
+            title="Minimal Packaging Design"
+            category="Visual System"
+            year="2023"
+            image="/works/minimal-packaging-design.png"
+          />
+        </Link>
+
+      </div>
+
+    </section>
+  )
+}
+
+/* ===============================
+   FULL WORK PAGE (UNCHANGED)
+   =============================== */
+
+export default function Work() {
+  return (
+    <section className="max-w-5xl mx-auto px-5 pt-24 md:pt-28 pb-40">
 
       {/* PAGE TITLE */}
       <header className="mb-24">
@@ -28,21 +85,21 @@ export default function Work() {
         </Link>
 
         <Link to={`/work/editorial-social-campaign`}>
-        <WorkItem
-          title="Editorial Social Campaign"
-          category="Social Media"
-          year="2024"
-          image="/works/editorial-social-banner.png"
-        />
+          <WorkItem
+            title="Editorial Social Campaign"
+            category="Social Media"
+            year="2024"
+            image="/works/editorial-social-banner.png"
+          />
         </Link>
 
-         <Link to={`/work/minimal-packaging-design`}>
-        <WorkItem
-          title="Minimal Packaging Design"
-          category="Visual System"
-          year="2023"
-          image="/works/minimal-packaging-design.png"
-        />
+        <Link to={`/work/minimal-packaging-design`}>
+          <WorkItem
+            title="Minimal Packaging Design"
+            category="Visual System"
+            year="2023"
+            image="/works/minimal-packaging-design.png"
+          />
         </Link>
 
       </div>
@@ -51,7 +108,7 @@ export default function Work() {
 }
 
 /* ===============================
-   WORK ITEM
+   WORK ITEM (UNCHANGED)
    =============================== */
 
 function WorkItem({ title, category, year, image }) {
@@ -81,9 +138,7 @@ function WorkItem({ title, category, year, image }) {
         {title}
       </h2>
 
-      {/* SPACER */}
       <div className="mt-24 border-t border-white/5" />
-
     </div>
   )
 }
