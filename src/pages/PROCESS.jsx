@@ -7,11 +7,11 @@ export function ProcessSection() {
     <section className="px-5 pt-2 pb-40">
 
       <header className="mb-24">
-        <span className="block text-xs uppercase tracking-[0.3em] text-white/40 fade-up">
+        <span className="block text-xs uppercase tracking-[0.3em] text-white/40" data-aos="fade-up">
           Process
         </span>
 
-        <h2 className="mt-6 text-3xl md:text-4xl font-semibold tracking-tight fade-up">
+        <h2 className="mt-6 text-3xl md:text-4xl font-semibold tracking-tight" data-aos="fade-up" data-aos-delay="100">
           How I Approach Visual Work
         </h2>
       </header>
@@ -68,11 +68,11 @@ export default function Process() {
 
       {/* PAGE TITLE */}
       <header className="mb-24">
-        <h1 className="text-5xl md:text-6xl font-semibold tracking-tight fade-up">
+        <h1 className="text-5xl md:text-6xl font-semibold tracking-tight" data-aos="fade-up">
           PROCESS
         </h1>
 
-        <p className="mt-6 max-w-md text-xs uppercase tracking-[0.3em] text-white/60 fade-up">
+        <p className="mt-6 max-w-md text-xs uppercase tracking-[0.3em] text-white/60" data-aos="fade-up" data-aos-delay="100">
           How I approach visual work
         </p>
       </header>
@@ -129,7 +129,7 @@ export default function Process() {
 
 function ProcessBlock({ index, title, description }) {
   return (
-    <div className="fade-up">
+    <div data-aos="fade-up">
 
       {/* INDEX */}
       <span className="block text-xs uppercase tracking-[0.4em] text-white/40">
@@ -156,7 +156,7 @@ function ProcessBlock({ index, title, description }) {
 
 function ArtGallery() {
   return (
-    <div className="fade-up">
+    <div data-aos="fade-up">
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 

@@ -9,16 +9,16 @@ export function WorkSection() {
     <section className="mx-auto px-5 pt-40 pb-40">
 
       <header className="mb-24">
-        <span className="block text-xs uppercase tracking-[0.3em] text-white/40 fade-up">
+        <span className="block text-xs uppercase tracking-[0.3em] text-white/40" data-aos="fade-up">
           Work
         </span>
 
-        <h2 className="mt-6 text-3xl md:text-4xl font-semibold tracking-tight fade-up">
+        <h2 className="mt-6 text-3xl md:text-4xl font-semibold tracking-tight" data-aos="fade-up" data-aos-delay="100">
           Selected Projects
         </h2>
       </header>
 
-     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-2">
 
         <Link to={`/work/brand-identity-system`}>
           <WorkItem
@@ -38,7 +38,7 @@ export function WorkSection() {
           />
         </Link>
 
-         <Link to={`/work/minimal-packaging-design`}>
+        <Link to={`/work/minimal-packaging-design`}>
           <WorkItem
             title="Minimal Packaging Design"
             category="Visual System"
@@ -63,11 +63,11 @@ export default function Work() {
 
       {/* PAGE TITLE */}
       <header className="mb-24">
-        <h1 className="text-5xl md:text-6xl font-semibold tracking-tight fade-up">
+        <h1 className="text-5xl md:text-6xl font-semibold tracking-tight" data-aos="fade-up">
           WORK
         </h1>
 
-        <p className="mt-6 max-w-md text-xs uppercase tracking-[0.2em] text-white/60 fade-up">
+        <p className="mt-6 max-w-md text-xs uppercase tracking-[0.2em] text-white/60" data-aos="fade-up" data-aos-delay="100">
           Selected visual works
         </p>
       </header>
@@ -113,7 +113,7 @@ export default function Work() {
 
 function WorkItem({ title, category, year, image }) {
   return (
-    <div className="group fade-up">
+    <div className="group" data-aos="fade-up">
 
       <div className="relative aspect-[16/9] overflow-hidden mb-10 bg-white/5">
         <img

@@ -49,7 +49,7 @@ export default function WorkDetail() {
   const { slug } = useParams()
   const work = works.find((item) => item.slug === slug)
 
- if (!work) return null
+  if (!work) return null
 
 
 
@@ -57,7 +57,7 @@ export default function WorkDetail() {
     <section className="max-w-4xl mx-auto px-5 pt-40 pb-40">
 
       {/* BANNER */}
-      <div className="aspect-[16/9] mb-20 overflow-hidden bg-white/5 fade-up">
+      <div className="aspect-[16/9] mb-20 overflow-hidden bg-white/5" data-aos="fade-up">
         <img
           src={work.banner}
           alt={work.title}
@@ -66,7 +66,7 @@ export default function WorkDetail() {
       </div>
 
       {/* HEADER */}
-      <header className="mb-20 fade-up">
+      <header className="mb-20" data-aos="fade-up">
         <div className="flex justify-between text-xs uppercase tracking-[0.3em] text-white/60">
           <span>{work.category}</span>
           <span>{work.year}</span>
@@ -84,7 +84,7 @@ export default function WorkDetail() {
       {/* GALLERY */}
       <div className="space-y-20">
         {work.images.map((img, i) => (
-          <div key={i} className="fade-up">
+          <div key={i} data-aos="fade-up">
             <img src={img} alt="" className="w-full" />
           </div>
         ))}

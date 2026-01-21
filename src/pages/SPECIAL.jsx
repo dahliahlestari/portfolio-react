@@ -24,23 +24,23 @@ export default function Home() {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-10">
 
         {/* SMALL NOTE */}
-        <span className="block text-[10px] uppercase tracking-[0.25em] text-white/40 fade-up">
+        <span className="block text-[10px] uppercase tracking-[0.25em] text-white/40" data-aos="fade-up">
           Studio Practice
         </span>
 
         {/* HERO */}
-        <h1 className="melt font-semibold text-[18vw] md:text-[10vw]"
-            data-text="SPECIAL">
-            SPECIAL
-          </h1>
+        <h1 className="font-semibold text-[18vw] md:text-[10vw]"
+          data-text="SPECIAL">
+          SPECIAL
+        </h1>
 
         {/* BREAK */}
-        <div className="mt-20 fade-up">
+        <div className="mt-20" data-aos="fade-up" data-aos-delay="100">
           <span className="inline-block w-20 h-[1px] bg-white/30" />
         </div>
 
         {/* STATEMENT */}
-        <div className="mt-20 max-w-md fade-up">
+        <div className="mt-20 max-w-md" data-aos="fade-up" data-aos-delay="200">
           <p className="text-white/80 leading-relaxed">
             Graphic design approached as a system.
           </p>
@@ -53,7 +53,7 @@ export default function Home() {
 
 
         {/* META */}
-        <div className="mt-32 grid grid-cols-1 md:grid-cols-3 gap-16 fade-up">
+        <div className="mt-32 grid grid-cols-1 md:grid-cols-3 gap-20" data-aos="fade-up" data-aos-delay="300">
 
           <div>
             <span className="block text-[10px] uppercase tracking-[0.2em] text-white/40">
@@ -88,13 +88,13 @@ export default function Home() {
           </div>
 
         </div>
-        
+
         <div className="mt-10 space-y-10 md:space-y-10">
           <WorkSection />
           <ProcessSection />
         </div>
         {/* CTA */}
-        <div className="mt-40 fade-up">
+        <div className="mt-40" data-aos="fade-up">
           <a
             href="/work"
             className="text-[10px] uppercase tracking-[0.3em] text-white/40 hover:text-white transition"

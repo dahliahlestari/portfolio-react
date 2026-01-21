@@ -40,6 +40,15 @@ export default function Navbar() {
             Social
           </NavLink>
 
+          <NavLink
+            to="/studio"
+            className={({ isActive }) =>
+              isActive ? "text-white" : "hover:text-white transition"
+            }
+          >
+            Studio
+          </NavLink>
+
         </nav>
       </div>
     </header>

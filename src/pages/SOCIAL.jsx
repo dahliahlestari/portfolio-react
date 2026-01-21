@@ -4,11 +4,11 @@ export default function Social() {
 
       {/* PAGE TITLE */}
       <header className="mb-24">
-        <h1 className="text-5xl md:text-6xl font-semibold tracking-tight fade-up">
+        <h1 className="text-5xl md:text-6xl font-semibold tracking-tight" data-aos="fade-up">
           SOCIAL
         </h1>
 
-        <p className="mt-6 max-w-md text-xs uppercase tracking-[0.3em] text-white/60 fade-up">
+        <p className="mt-6 max-w-md text-xs uppercase tracking-[0.3em] text-white/60" data-aos="fade-up" data-aos-delay="100">
           Studio presence & contact
         </p>
       </header>
@@ -54,7 +54,7 @@ export default function Social() {
         />
 
         {/* LEGAL */}
-        <div className="pt-16 border-t border-white/10 fade-up">
+        <div className="pt-16 border-t border-white/10" data-aos="fade-up">
           <span className="block text-xs uppercase tracking-[0.4em] text-white/40">
             Legal
           </span>
@@ -67,7 +67,7 @@ export default function Social() {
             © {new Date().getFullYear()} SPECIAL. All rights reserved.
           </p>
         </div>
-        
+
       </div>
     </section>
   )
@@ -85,7 +85,8 @@ function InfoBlock({ label, title, description, link }) {
       href={link}
       target={link ? "_blank" : undefined}
       rel={link ? "noopener noreferrer" : undefined}
-      className="block fade-up group"
+      className="block group"
+      data-aos="fade-up"
     >
       {/* LABEL */}
       <span className="block text-xs uppercase tracking-[0.25em] text-white/40">

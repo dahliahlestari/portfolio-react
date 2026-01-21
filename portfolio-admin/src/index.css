@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@layer utilities {
+    .bg-base {
+        background-color: #08080a;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @apply bg-[#08080a] text-white antialiased;
+}
+
+/* Custom Scrollbar for Admin */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #08080a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
