@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===============================
+   BACKGROUND SYSTEM (ART STYLE)
+   SPECIAL — DARK MONOCHROME
+   =============================== */
+
+@layer utilities {
+
+  .hero-mask {
+    -webkit-mask-image: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 1) 18%,
+        rgba(0, 0, 0, 1) 70%,
+        rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 1) 18%,
+        rgba(0, 0, 0, 1) 70%,
+        rgba(0, 0, 0, 0) 100%);
+  }
+
+  /* BASE */
+  .bg-base {
+    background-color: rgba(8, 8, 10, 0.366);
+  }
+
+  /* COLOR WASH — MONOCHROME DEPTH */
+  .bg-art-gradient {
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(45% 90% at 18% 14%, rgba(255, 255, 255, 0.161), transparent 70%),
+      radial-gradient(55% 85% at 85% 48%, rgba(255, 255, 255, 0.094), transparent 75%),
+      radial-gradient(70% 100% at 35% 85%, rgba(0, 0, 0, 0.95), transparent 82%);
+    filter: blur(7px);
+    z-index: -40;
+    pointer-events: none;
+  }
+
+  /* STRIPES — SUBTLE TEXTURE */
+  .bg-art-stripes {
+    position: fixed;
+    inset: 0;
+    background-image: repeating-linear-gradient(90deg,
+        rgba(255, 255, 255, 0.035) 1px,
+        transparent 9px,
+        transparent 18px);
+    mix-blend-mode: overlay;
+    opacity: 0.45;
+    animation: moveStripes 55s linear infinite;
+    z-index: -30;
+    pointer-events: none;
+  }
+
+
+
+  /* ===============================
+   SCROLL REACTIVE EFFECTS
+   (VERY SOFT)
+   =============================== */
+
+  .scroll-gradient {
+    transform:
+      translateY(calc(var(--scroll) * 0.05px)) scale(1.02);
+  }
+
+  .scroll-stripes {
+    background-position-x: calc(var(--scroll) * 0.12px);
+  }
+
+}
+
+/* ===============================
+   ANIMATIONS
+   =============================== */
+
+
+
+@keyframes moveStripes {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 360px 0;
+  }
+}
+
+/* ===============================
+   BACKGROUND MOTION (ART ANIMATION)
+   ADD-ON ONLY — NON DESTRUCTIVE
+   =============================== */
+
+/* GRADIENT FLOW */
+.bg-art-gradient {
+  animation: gradientFlow 15s ease-in-out infinite;
+  background-size: 120% 120%;
+}
+
+/* BREATHING LIGHT */
+.bg-art-gradient {
+  animation:
+    gradientFlow 15s ease-in-out infinite,
+    lightBreathing 10s ease-in-out infinite;
+}
+
+/* OPTIONAL: STRIPES DRIFT (MICRO MOTION) */
+.bg-art-stripes {
+  animation:
+    moveStripes 55s linear infinite,
+    stripeDrift 90s linear infinite;
+}
+
+.melt {
+  position: relative;
+}
+
+.melt::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(20px) scaleY(1.3);
+  filter: blur(2px);
+  opacity: 0.4;
+}
+
+
+/* ===============================
+   KEYFRAMES (NEW)
+   =============================== */
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes lightBreathing {
+  0% {
+    filter: blur(7px) brightness(0.95);
+  }
+
+  50% {
+    filter: blur(8px) brightness(1.05);
+  }
+
+  100% {
+    filter: blur(7px) brightness(0.95);
+  }
+}
+
+@keyframes stripeDrift {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 600px 0;
+  }
+}
+
+
+/* ===============================
+   GLOBAL
+   =============================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#08080a] text-white antialiased;
+}
