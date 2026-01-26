@@ -11,7 +11,11 @@ export default function Payment() {
     const [isSubmitting, setIsSubmitting] = useState(false)
 
     if (!state || !state.product) return <div className="pt-40 text-center text-white">Invalid Order.</div>
+<<<<<<< HEAD
     const { product, name, email, whatsapp, customData } = state
+=======
+    const { product, name, email, whatsapp } = state
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
 
     const handleFinish = async () => {
         setIsSubmitting(true)
@@ -23,7 +27,10 @@ export default function Payment() {
                 customerName: name,
                 customerEmail: email,
                 customerWhatsapp: whatsapp,
+<<<<<<< HEAD
                 customData: customData || null, // SAVE CUSTOM DATA
+=======
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
                 status: "pending",
                 paymentMethod: activeTab,
                 createdAt: new Date()

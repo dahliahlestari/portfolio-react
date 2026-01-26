@@ -2,12 +2,16 @@ import { useState, useEffect } from "react"
 import { useParams, useNavigate, useLocation } from "react-router-dom"
 import { collection, query, where, getDocs } from "firebase/firestore"
 import { db } from "../lib/firebase"
+<<<<<<< HEAD
 import { useAuth } from "../context/AuthContext"
+=======
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
 
 export default function Checkout() {
     const { slug } = useParams()
     const navigate = useNavigate()
     const location = useLocation()
+<<<<<<< HEAD
     const { user, loading: authLoading } = useAuth()
 
     const [product, setProduct] = useState(location.state?.product || null)
@@ -25,6 +29,11 @@ export default function Checkout() {
         }
     }, [user, authLoading, navigate, location])
 
+=======
+    const [product, setProduct] = useState(location.state?.product || null)
+    const [loading, setLoading] = useState(!product)
+
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
     useEffect(() => {
         if (!product) {
             const fetchProduct = async () => {
@@ -52,6 +61,7 @@ export default function Checkout() {
         whatsapp: "",
     })
 
+<<<<<<< HEAD
     // Pre-fill user data when user is loaded
     useEffect(() => {
         if (user) {
@@ -64,6 +74,9 @@ export default function Checkout() {
     }, [user])
 
     if (authLoading || loading) return <div className="pt-40 text-center text-white/40 animate-pulse">Loading checkout...</div>
+=======
+    if (loading) return <div className="pt-40 text-center text-white/40 animate-pulse">Loading checkout...</div>
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
     if (!product) return <div className="pt-40 text-center text-white">Product not found.</div>
 
     const handleChange = (e) => {
@@ -72,6 +85,7 @@ export default function Checkout() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+<<<<<<< HEAD
         // Navigate to payment with form data AND product data AND custom data
         navigate(`/payment/${slug}`, {
             state: {
@@ -80,6 +94,10 @@ export default function Checkout() {
                 customData: location.state?.customData
             }
         })
+=======
+        // Navigate to payment with form data AND product data
+        navigate(`/payment/${slug}`, { state: { ...formData, product } })
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
     }
 
     return (
@@ -90,6 +108,7 @@ export default function Checkout() {
             <div className="bg-white/5 p-6 rounded-sm mb-10 border border-white/10">
                 <h2 className="text-xl font-medium mb-1">{product.title}</h2>
                 <p className="text-sm text-white/60 mb-4">{product.category}</p>
+<<<<<<< HEAD
 
                 {/* Custom Data Preview - Only if coming from Editor */}
                 {location.state?.customData && (
@@ -101,6 +120,9 @@ export default function Checkout() {
                 )}
 
                 <div className="flex justify-between items-center border-t border-white/10 pt-4 mt-4">
+=======
+                <div className="flex justify-between items-center border-t border-white/10 pt-4">
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
                     <span>Total</span>
                     <span className="text-lg font-medium">{product.price}</span>
                 </div>
@@ -129,14 +151,22 @@ export default function Checkout() {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
+<<<<<<< HEAD
                         disabled={!!user?.email} // Disable if logged in with email
                         className="w-full bg-white/5 border border-white/10 p-3 text-white focus:outline-none focus:border-white/40 transition disabled:opacity-50 disabled:cursor-not-allowed"
+=======
+                        className="w-full bg-white/5 border border-white/10 p-3 text-white focus:outline-none focus:border-white/40 transition"
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
                         placeholder="your@email.com"
                     />
                 </div>
 
                 <div>
+<<<<<<< HEAD
                     <label className="block text-xs uppercase tracking-widest text-white/40 mb-2">WhatsApp Number</label>
+=======
+                    <label className="block text-xs uppercase tracking-widest text-white/60 mb-2">WhatsApp Number</label>
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
                     <input
                         required
                         type="tel"

@@ -7,7 +7,10 @@ import { db } from "../lib/firebase"
 export default function StudioProduct() {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
+<<<<<<< HEAD
     const [error, setError] = useState(null)
+=======
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -17,7 +20,10 @@ export default function StudioProduct() {
                 setProducts(items)
             } catch (error) {
                 console.error("Error fetching products:", error)
+<<<<<<< HEAD
                 setError(error.message)
+=======
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
             } finally {
                 setLoading(false)
             }
@@ -41,6 +47,7 @@ export default function StudioProduct() {
             </div>
 
             {loading ? (
+<<<<<<< HEAD
                 <div className="text-white/40 animate-pulse text-center py-20">
                     <p className="text-xl mb-2">Loading collection...</p>
                     <p className="text-xs">Connecting to Studio Database</p>
@@ -65,6 +72,9 @@ export default function StudioProduct() {
                         </ul>
                     </div>
                 </div>
+=======
+                <div className="text-white/40 animate-pulse">Loading collection...</div>
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
             ) : (
                 <>
                     {/* WEDDING SECTION */}
@@ -124,7 +134,11 @@ export default function StudioProduct() {
                     </p>
 
                     <a
+<<<<<<< HEAD
                         href="https://wa.me/6281299723970?text=Hello,%20I%20would%20like%20to%20consult%20for%20a%20custom%20design."
+=======
+                        href="https://wa.me/6281234567890?text=Hello,%20I%20would%20like%20to%20consult%20for%20a%20custom%20design."
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-block border border-white/20 px-8 py-4 text-sm uppercase tracking-widest hover:bg-white hover:text-black transition duration-300"

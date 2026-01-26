@@ -4,7 +4,10 @@ import AOS from "aos"
 import "aos/dist/aos.css"
 
 import MainLayout from "./layouts/MainLayout"
+<<<<<<< HEAD
 import { AuthProvider } from "./context/AuthContext"
+=======
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
 
 import Home from "./pages/SPECIAL"
 import Work from "./pages/WORK"
@@ -16,6 +19,7 @@ import StudioProductDetail from "./pages/STUDIOPRODUCTDETAIL"
 import Checkout from "./pages/CHECKOUT"
 import Payment from "./pages/PAYMENT"
 import Success from "./pages/SUCCESS"
+<<<<<<< HEAD
 import Editor from "./pages/EDITOR"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
@@ -32,6 +36,10 @@ import RedElegant from "./templates/RedElegant"
 import ModernMinimal from "./templates/ModernMinimal"
 import BirthdayBash from "./templates/BirthdayBash"
 import VintageArch from "./templates/VintageArch"
+=======
+import Wedding01 from "./templates/Wedding01"
+
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
 
 export default function App() {
   useEffect(() => {
@@ -44,7 +52,11 @@ export default function App() {
   }, [])
 
   return (
+<<<<<<< HEAD
     <AuthProvider>
+=======
+    <>
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
       <Routes>
         {/* MAIN SITE LAYOUT */}
         <Route element={<MainLayout />}>
@@ -54,13 +66,17 @@ export default function App() {
           <Route path="/social" element={<Social />} />
           <Route path="/studio" element={<StudioProduct />} />
           <Route path="/studio/:slug" element={<StudioProductDetail />} />
+<<<<<<< HEAD
           <Route path="/editor/:slug" element={<Editor />} />
+=======
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
           <Route path="/checkout/:slug" element={<Checkout />} />
           <Route path="/payment/:slug" element={<Payment />} />
           <Route path="/success" element={<Success />} />
           <Route path="/work/:slug" element={<WorkDetail />} />
         </Route>
 
+<<<<<<< HEAD
         {/* AUTH ROUTES */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
@@ -86,5 +102,12 @@ export default function App() {
         <Route path="/IsabellaBirthday" element={<BirthdayBash />} />
       </Routes>
     </AuthProvider>
+=======
+        {/* STANDALONE PREVIEWS (NO LAYOUT) */}
+        <Route path="/preview/wedding-01" element={<Wedding01 />} />
+        <Route path="/SarahAndJames" element={<Wedding01 />} />
+      </Routes>
+    </>
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
   )
 }

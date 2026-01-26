@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+=======
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,6 +13,7 @@
 
 @layer utilities {
 
+<<<<<<< HEAD
   .hero-mask {
     -webkit-mask-image: linear-gradient(to bottom,
         rgba(0, 0, 0, 0) 0%,
@@ -25,19 +29,50 @@
 
   /* BASE */
   .bg-base {
+=======
+   .hero-mask {
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,1) 18%,
+      rgba(0,0,0,1) 70%,
+      rgba(0,0,0,0) 100%
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,1) 18%,
+      rgba(0,0,0,1) 70%,
+      rgba(0,0,0,0) 100%
+    );
+  }
+
+  /* BASE */
+  .bg-base {  
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
     background-color: rgba(8, 8, 10, 0.366);
   }
 
   /* COLOR WASH — MONOCHROME DEPTH */
+<<<<<<< HEAD
   .bg-art-gradient {
+=======
+  .bg-art-gradient {  
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
     position: fixed;
     inset: 0;
     background:
       radial-gradient(45% 90% at 18% 14%, rgba(255, 255, 255, 0.161), transparent 70%),
       radial-gradient(55% 85% at 85% 48%, rgba(255, 255, 255, 0.094), transparent 75%),
+<<<<<<< HEAD
       radial-gradient(70% 100% at 35% 85%, rgba(0, 0, 0, 0.95), transparent 82%);
     filter: blur(7px);
     z-index: -40;
+=======
+      radial-gradient(70% 100% at 35% 85%, rgba(0,0,0,0.95), transparent 82%);
+    filter: blur(7px);
+    z-index: -40; 
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
     pointer-events: none;
   }
 
@@ -45,10 +80,19 @@
   .bg-art-stripes {
     position: fixed;
     inset: 0;
+<<<<<<< HEAD
     background-image: repeating-linear-gradient(90deg,
         rgba(255, 255, 255, 0.035) 1px,
         transparent 9px,
         transparent 18px);
+=======
+    background-image: repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,0.035) 1px,
+      transparent 9px,
+      transparent 18px
+    );
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
     mix-blend-mode: overlay;
     opacity: 0.45;
     animation: moveStripes 55s linear infinite;
@@ -65,7 +109,12 @@
 
   .scroll-gradient {
     transform:
+<<<<<<< HEAD
       translateY(calc(var(--scroll) * 0.05px)) scale(1.02);
+=======
+      translateY(calc(var(--scroll) * 0.05px))
+      scale(1.02);
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
   }
 
   .scroll-stripes {
@@ -84,7 +133,10 @@
   from {
     background-position: 0 0;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
   to {
     background-position: 360px 0;
   }
@@ -138,11 +190,17 @@
   0% {
     background-position: 0% 0%;
   }
+<<<<<<< HEAD
 
   50% {
     background-position: 100% 50%;
   }
 
+=======
+  50% {
+    background-position: 100% 50%;
+  }
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
   100% {
     background-position: 0% 0%;
   }
@@ -152,11 +210,17 @@
   0% {
     filter: blur(7px) brightness(0.95);
   }
+<<<<<<< HEAD
 
   50% {
     filter: blur(8px) brightness(1.05);
   }
 
+=======
+  50% {
+    filter: blur(8px) brightness(1.05);
+  }
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
   100% {
     filter: blur(7px) brightness(0.95);
   }
@@ -166,7 +230,10 @@
   from {
     background-position: 0 0;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
   to {
     background-position: 600px 0;
   }
@@ -183,4 +250,8 @@ html {
 
 body {
   @apply bg-[#08080a] text-white antialiased;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
