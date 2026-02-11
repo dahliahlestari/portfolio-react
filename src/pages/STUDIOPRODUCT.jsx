@@ -81,7 +81,7 @@ export default function StudioProduct() {
                     {weddingTemplates.length > 0 && (
                         <div className="mb-24" data-aos="fade-up">
                             <div className="flex items-end justify-between mb-8 border-b border-white/10 pb-4">
-                                <h2 className="text-2xl font-medium">Wedding Templates</h2>
+                                <h2 className="text-2xl font-medium">SOON</h2>
                                 <span className="text-xs uppercase tracking-widest text-white/40">Series 01</span>
                             </div>
 
@@ -101,7 +101,7 @@ export default function StudioProduct() {
                     {eventTemplates.length > 0 && (
                         <div className="mb-24" data-aos="fade-up">
                             <div className="flex items-end justify-between mb-8 border-b border-white/10 pb-4">
-                                <h2 className="text-2xl font-medium">Event Templates</h2>
+                                <h2 className="text-2xl font-medium">SOON Templates</h2>
                                 <span className="text-xs uppercase tracking-widest text-white/40">Series 02</span>
                             </div>
 
@@ -135,9 +135,9 @@ export default function StudioProduct() {
 
                     <a
 <<<<<<< HEAD
-                        href="https://wa.me/6281299723970?text=Hello,%20I%20would%20like%20to%20consult%20for%20a%20custom%20design."
+                        href="https://wa.me/628129723970?text=Hello,%20I%20would%20like%20to%20consult%20for%20a%20custom%20design."
 =======
-                        href="https://wa.me/6281234567890?text=Hello,%20I%20would%20like%20to%20consult%20for%20a%20custom%20design."
+                        href="https://wa.me/6281299723970?text=Hello,%20I%20would%20like%20to%20consult%20for%20a%20custom%20design."
 >>>>>>> 768275e1fd62d5fa2db7b565128d338df075690a
                         target="_blank"
                         rel="noopener noreferrer"
